@@ -10,7 +10,7 @@ const Header = () => {
       <Link className="flex mb-4 md:mb-0" to="/">
         <img
           className="rounded-full w-16 h-16"
-          src="./assets/logo_preta.png"
+          src="./src/assets/logo_preta.png"
           alt="Image"
         />
       </Link>
