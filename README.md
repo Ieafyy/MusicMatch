@@ -45,8 +45,6 @@ git clone https://github.com/Ieafyy/MusicMatch.git
 
 (Se nunca tiver clonado nenhum repositório antes provavelmente irá precisar de realizar o login na sua conta do GitHub)
 
-(Não é obrigatório, mas recomendo instalar algum plugin pra gerir o fluxo do git, o https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph é o que eu uso)
-
 ---
 
 ### 3) Iniciando o projeto localmente
