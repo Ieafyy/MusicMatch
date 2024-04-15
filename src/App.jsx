@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/MusicMatch" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
