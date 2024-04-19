@@ -27,7 +27,7 @@ const NewsHome = () => {
         {urls.map((url, index) => {
           return (
             <div
-              className="flex flex-col cursor-pointer bg-purple-600 ease-in-out duration-300 hover:scale-105 hover:bg-purple-800 hover:shadow-2xl tra hover:shadow-purple-500"
+              className="flex flex-col cursor-pointer bg-purple-400 ease-in-out duration-300 hover:scale-105 hover:bg-purple-600 hover:shadow-2xl tra hover:shadow-purple-500"
               style={{
                 height: "50vh",
               }}

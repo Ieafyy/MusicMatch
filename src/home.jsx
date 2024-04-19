@@ -2,6 +2,7 @@ import React from "react";
 import TopTrending from "./components/topTrending";
 import ForYou from "./components/ForYou";
 import NewsHome from "./components/NewsHome";
+import Footer from "./footer";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
       <TopTrending />
       <ForYou />
       <NewsHome />
-      <div className="mt-10 text-5xl text-center">cabo</div>
+      <div className="mt-10 text-5xl text-center">
+        <i className="fas fa-arrow-down bg-gray-300 p-5 rounded-2xl hover:bg-gray-400 cursor-pointer duration-300 ease-in-out" />
+      </div>
     </div>
   );
 };

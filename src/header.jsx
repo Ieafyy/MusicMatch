@@ -7,7 +7,7 @@ const Header = () => {
       <a href="" className="font-bold text-3xl">
         <i className="fa-solid fa-bars"></i>
       </a>
-      <Link className="flex mb-4 md:mb-0" to="/">
+      <Link className="flex mb-4 md:mb-0" to="/MusicMatch">
         <img
           className="rounded-full w-16 h-16"
           src="https://i.ibb.co/rckCKp5/logo-preta.png"
