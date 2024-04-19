@@ -20,7 +20,7 @@ const TopTranding = () => {
           <span
             onClick={() => setTop("musica")}
             className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-              top === "musica" ? "bg-purple-600" : "bg-black text-white"
+              top === "musica" ? "bg-roxo" : "bg-black text-white"
             } `}
           >
             Musicas
@@ -28,7 +28,7 @@ const TopTranding = () => {
           <span
             onClick={() => setTop("artista")}
             className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-              top === "artista" ? "bg-purple-600" : "bg-black text-white"
+              top === "artista" ? "bg-roxo" : "bg-black text-white"
             } `}
           >
             Artistas
@@ -36,13 +36,13 @@ const TopTranding = () => {
           <span
             onClick={() => setTop("genero")}
             className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-              top === "genero" ? "bg-purple-600" : "bg-black text-white"
+              top === "genero" ? "bg-roxo" : "bg-black text-white"
             } `}
           >
             Generos
           </span>
         </nav>
-        <div className="bg-purple-600 py-10 text-black">
+        <div className="bg-roxo py-10 text-black">
           {top === "musica" && <TopTrendingMusicas />}
           {top === "artista" && <TopTrendingArtistas />}
           {top === "genero" && <TopTrendingGeneros />}

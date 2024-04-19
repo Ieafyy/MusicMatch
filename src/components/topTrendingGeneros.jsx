@@ -2,7 +2,7 @@ import React from "react";
 
 const TopTradingGeneros = () => {
   return (
-    <div className="flex flex-col pt-10 px-10 gap-10 bg-purple-600 rounded-b-2xl">
+    <div className="flex flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl">
       <div className="flex flex-col gap-5">
         <div className="flex ">
           <div className="bg-white pl-2 w-10/12">

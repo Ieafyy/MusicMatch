@@ -46,7 +46,7 @@ const ForYou = () => {
             <i className="fa-solid fa-star"></i>
             <i className="fa-regular fa-star"></i>
           </div>
-          <button className="bg-purple-600 text-white py-3 px-16 rounded-xl mt-36 text-xl font-bold place-self-end hover:bg-purple-700">
+          <button className="bg-roxo text-white py-3 px-16 rounded-xl mt-36 text-xl font-bold place-self-end hover:bg-purple-700">
             Escutar agora
           </button>
         </div>
@@ -55,31 +55,31 @@ const ForYou = () => {
       <div className="text-xl mt-10 text-center text-gray-600">
         <i
           className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 0 ? "text-purple-600 fa-solid" : ""
+            carrosselState == 0 ? "text-roxo fa-solid" : ""
           } `}
           onClick={() => setCarrouselState(0)}
         ></i>
         <i
           className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 1 ? "text-purple-600 fa-solid" : ""
+            carrosselState == 1 ? "text-roxo fa-solid" : ""
           } `}
           onClick={() => setCarrouselState(1)}
         ></i>
         <i
           className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 2 ? "text-purple-600 fa-solid" : ""
+            carrosselState == 2 ? "text-roxo fa-solid" : ""
           } `}
           onClick={() => setCarrouselState(2)}
         ></i>
         <i
           className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 3 ? "text-purple-600 fa-solid" : ""
+            carrosselState == 3 ? "text-roxo fa-solid" : ""
           } `}
           onClick={() => setCarrouselState(3)}
         ></i>
         <i
           className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 4 ? "text-purple-600 fa-solid" : ""
+            carrosselState == 4 ? "text-roxo fa-solid" : ""
           } `}
           onClick={() => setCarrouselState(4)}
         ></i>

@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="pt-10 mx-10">
       <h1 className="text-8xl text-center">Music Match</h1>
-      <p className="text-xl text-center my-10">
+      <p className="text-xl text-center my-10 text-">
         “A música pode mudar o mundo porque pode mudar as pessoas.” – Bono.
       </p>
       <TopTrending />
