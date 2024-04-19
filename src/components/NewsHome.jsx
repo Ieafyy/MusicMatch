@@ -23,28 +23,21 @@ const NewsHome = () => {
       >
         Oque rola no mundo da música?
       </h1>
-
-      <div className="grid grid-cols-2 gap-36 justify-items-center mt-10">
+      <div className="grid grid-cols-2 gap-16 mt-10">
         {urls.map((url, index) => {
           return (
             <div
+              className="flex flex-col cursor-pointer bg-purple-600 ease-in-out duration-300 hover:scale-105 hover:bg-purple-800 hover:shadow-2xl tra hover:shadow-purple-500"
               style={{
-                backgroundColor: "#B37AC5",
-                width: "100%",
-                height: "500px",
+                height: "50vh",
               }}
             >
               <img
                 src={url}
                 alt=""
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{ width: "100%", height: "60%", objectFit: "cover" }}
               />
-              <p
-                className="text-2xl py-5 text-white font-bold px-10 border border-black"
-                style={{
-                  backgroundColor: "#B37AC5",
-                }}
-              >
+              <p className="text-2xl py-5 text-white font-bold px-10 ">
                 {manchetes[index]}
               </p>
             </div>

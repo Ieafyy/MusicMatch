@@ -13,6 +13,7 @@ const Home = () => {
       <TopTrending />
       <ForYou />
       <NewsHome />
+      <div className="mt-10 text-5xl text-center">cabo</div>
     </div>
   );
 };
