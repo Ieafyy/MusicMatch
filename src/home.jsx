@@ -2,7 +2,6 @@ import React from "react";
 import TopTrending from "./components/topTrending";
 import ForYou from "./components/ForYou";
 import NewsHome from "./components/NewsHome";
-import Footer from "./footer";
 
 const Home = () => {
   return (
