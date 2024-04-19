@@ -23,7 +23,7 @@ const NewsHome = () => {
       >
         Oque rola no mundo da música?
       </h1>
-      <div className="grid grid-cols-2 gap-16 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-10 ">
         {urls.map((url, index) => {
           return (
             <div
