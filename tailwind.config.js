@@ -7,6 +7,9 @@ export default {
         roxo: "#841C94",
         rosa: "#B37AC5",
       },
+      fontFamily: {
+        newAstro: ["new-astro", "sans-serif"],
+      },
     },
   },
   plugins: [],

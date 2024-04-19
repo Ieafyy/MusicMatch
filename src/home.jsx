@@ -6,16 +6,7 @@ import NewsHome from "./components/NewsHome";
 const Home = () => {
   return (
     <div className="pt-10 mx-10">
-      <h1
-        className="text-8xl text-center"
-        style={{
-          fontFamily: "new-astro, sans-serif",
-          fontWeight: 400,
-          fontStyle: "normal",
-        }}
-      >
-        Music Match
-      </h1>
+      <h1 className="text-8xl text-center font-newAstro">Music Match</h1>
       <p className="text-xl text-center my-10 text-">
         “A música pode mudar o mundo porque pode mudar as pessoas.” – Bono.
       </p>
