@@ -4,13 +4,16 @@ import ModalLateral from "./components/modalLateral";
 
 const Header = () => {
   const [modalLateral, setModalLateral] = React.useState(false);
+  const [animating, setAnimating] = React.useState(false);
 
   return (
     <div className="w-screen z-10 sticky top-0 ">
       <header className="flex py-3 px-10 justify-between items-center bg-roxo">
         <span
           className="font-bold text-3xl cursor-pointer"
-          onClick={() => setModalLateral(modalLateral ? false : true)}
+          onClick={() => {
+            if (!animating) setModalLateral(modalLateral ? false : true);
+          }}
         >
           <i className="fa-solid fa-bars"></i>
         </span>
@@ -35,7 +38,7 @@ const Header = () => {
           Login / Sign up
         </Link>
       </header>
-      <ModalLateral showModal={modalLateral} />
+      <ModalLateral showModal={modalLateral} setAnimating={setAnimating} />
     </div>
   );
 };
