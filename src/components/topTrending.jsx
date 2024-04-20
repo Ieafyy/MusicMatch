@@ -27,27 +27,27 @@ const TopTrending = () => {
         </h1>
 
         <div className="mt-10">
-          <nav className="flex flex-row gap-10">
+          <nav className="flex flex-row gap-5">
             <span
               onClick={() => setTop("musica")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "musica" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl ${
+                top === "musica" ? "bg-roxo w-64" : "w-36 bg-black text-white"
               } `}
             >
               Musicas
             </span>
             <span
               onClick={() => setTop("artista")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "artista" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl ${
+                top === "artista" ? "bg-roxo w-64" : "w-36 bg-black text-white"
               } `}
             >
               Artistas
             </span>
             <span
               onClick={() => setTop("genero")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "genero" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl ${
+                top === "genero" ? "bg-roxo w-64" : "w-36 bg-black text-white"
               } `}
             >
               Gêneros
@@ -65,7 +65,7 @@ const TopTrending = () => {
 
       <motion.div
         id="mobile"
-        className="hidden lg:block"
+        className="block lg:hidden"
         initial={{ opacity: 0, translateY: 500 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
@@ -77,34 +77,34 @@ const TopTrending = () => {
           className="text-5xl text-center font-newAstro"
           style={{ textShadow: "2px 2px 5px #9333ea" }}
         >
-          Top Trending
+          Top Trending (mobile)
         </h1>
 
         <div className="mt-10">
-          <nav className="flex flex-row gap-10">
+          <nav className="flex flex-row gap-3">
             <span
               onClick={() => setTop("musica")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "musica" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-5 py-3 font-bold rounded-t-2xl ${
+                top === "musica" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              Musicas
+              <i class="fa-solid fa-music"></i>
             </span>
             <span
               onClick={() => setTop("artista")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "artista" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-5 py-3 font-bold rounded-t-2xl ${
+                top === "artista" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              Artistas
+              <i class="fa-solid fa-user"></i>
             </span>
             <span
               onClick={() => setTop("genero")}
-              className={`cursor-pointer px-10 py-3 font-bold rounded-t-2xl ${
-                top === "genero" ? "bg-roxo" : "bg-black text-white"
+              className={`cursor-pointer ease-in-out duration-300 text-center px-5 py-3 font-bold rounded-t-2xl ${
+                top === "genero" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              Gêneros
+              <i class="fa-solid fa-guitar"></i>
             </span>
           </nav>
           <div className="bg-roxo py-10 text-black">
