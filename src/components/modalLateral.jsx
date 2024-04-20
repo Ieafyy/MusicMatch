@@ -27,7 +27,7 @@ const ModalLateral = ({ showModal, setAnimating }) => {
   }, [showModal]);
 
   return (
-    <div className={`z-10 absolute`} ref={menu}>
+    <div className={`z-10 absolute hidden`} ref={menu}>
       <ul className="flex-col inline-flex text-xl">
         <li className="text-white bg-cinza hover:text-black border-b-2 py-5 px-10 cursor-pointer">
           Sobre Nos

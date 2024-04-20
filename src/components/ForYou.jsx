@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, animate } from "framer-motion";
 
 const ForYou = () => {
   const [carouselState, setCarouselState] = React.useState(0);
@@ -42,9 +42,9 @@ const ForYou = () => {
     },
   ];
 
-  const handleCarouselClick = (index) => {
-    setCarouselState(index);
-  };
+  React.useEffect(() => {
+    animate(".card", { opacity: [0, 1] }, { duration: 0.5, ease: "easeOut" });
+  }, [carouselState]);
 
   return (
     <motion.div
@@ -67,7 +67,7 @@ const ForYou = () => {
         <img
           src={musicData[carouselState].imgUrl}
           alt="musicData[carouselState].name"
-          className="w-96 h-96"
+          className="w-96 h-96 card"
         />
         <div className="flex flex-col w-full h-full">
           <p className="font-bold text-4xl mb-5">
@@ -100,7 +100,7 @@ const ForYou = () => {
             className={`fa-circle fa-regular ml-2 cursor-pointer ${
               carouselState === index ? "text-roxo fa-solid" : ""
             } `}
-            onClick={() => handleCarouselClick(index)}
+            onClick={() => setCarouselState(index)}
           ></i>
         ))}
       </div>
