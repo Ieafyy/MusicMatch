@@ -6,7 +6,7 @@ const Header = () => {
   const [modalLateral, setModalLateral] = React.useState(false);
 
   return (
-    <div>
+    <div className="w-screen z-10 sticky top-0 ">
       <header className="flex py-3 px-10 justify-between items-center bg-roxo">
         <span
           className="font-bold text-3xl cursor-pointer"

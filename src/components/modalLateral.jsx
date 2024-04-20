@@ -11,13 +11,23 @@ const ModalLateral = ({ showModal }) => {
   }, [showModal]);
 
   return (
-    <div className={showModal ? "box" : "hidden"}>
-      <ul className="flex flex-col">
-        <li>Sobre Nos</li>
-        <li>Sobre Nos</li>
-        <li>Sobre Nos</li>
-        <li>Sobre Nos</li>
-        <li>Sobre Nos</li>
+    <div className={`${showModal ? "box" : "hidden"} z-10 absolute`}>
+      <ul className="flex-col inline-flex text-xl">
+        <li className="text-white bg-cinza hover:text-black border-b-2 py-5 px-10 cursor-pointer">
+          Sobre Nos
+        </li>
+        <li className="text-white bg-cinza hover:text-black border-b-2 py-5 px-10 cursor-pointer">
+          Sobre Nos
+        </li>
+        <li className="text-white bg-cinza hover:text-black border-b-2 py-5 px-10 cursor-pointer">
+          Sobre Nos
+        </li>
+        <li className="text-white bg-cinza hover:text-black border-b-2 py-5 px-10 cursor-pointer">
+          Sobre Nos
+        </li>
+        <li className="text-white bg-cinza hover:text-black py-5 px-10 cursor-pointer">
+          Sobre Nos
+        </li>
       </ul>
     </div>
   );
