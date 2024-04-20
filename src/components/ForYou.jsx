@@ -2,29 +2,49 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ForYou = () => {
-  const [carrosselState, setCarrouselState] = React.useState(0);
-  let imgSrc = [
-    "https://i.scdn.co/image/ab67616d0000b273c32340c5ed875c13a0a7173a",
-    "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
-    "https://i.scdn.co/image/ab67616d0000b273544730415c9d4bdb11f09fd2",
-    "https://i.scdn.co/image/ab67616d0000b27315784f5212050cf2e67f1935",
-    "https://i.scdn.co/image/ab67616d0000b27389bd77a51491581af7b02c9a",
+  const [carouselState, setCarouselState] = React.useState(0);
+
+  const musicData = [
+    {
+      imgUrl:
+        "https://i.scdn.co/image/ab67616d0000b273c32340c5ed875c13a0a7173a",
+      name: "Pegando Leve",
+      artist: "O Terno",
+      genre: "Indie Rock",
+    },
+    {
+      imgUrl:
+        "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
+      name: "Getting Better",
+      artist: "The Beatles",
+      genre: "Classic Rock",
+    },
+    {
+      imgUrl:
+        "https://i.scdn.co/image/ab67616d0000b273544730415c9d4bdb11f09fd2",
+      name: "O bêbado e a Equilibrista",
+      artist: "Elis Regina",
+      genre: "MPB",
+    },
+    {
+      imgUrl:
+        "https://i.scdn.co/image/ab67616d0000b27315784f5212050cf2e67f1935",
+      name: "Ho Hey",
+      artist: "The Lumineers",
+      genre: "Folk Rock",
+    },
+    {
+      imgUrl:
+        "https://i.scdn.co/image/ab67616d0000b27389bd77a51491581af7b02c9a",
+      name: "Juventude Solitude",
+      artist: "Selvagens a Procura de Lei",
+      genre: "Indie Rock",
+    },
   ];
-  let imgNames = [
-    "Pegando Leve",
-    "Getting Better",
-    "O bêbado e a Equilibrista",
-    "Ho Hey",
-    "Juventude Solitude",
-  ];
-  let imgArtists = [
-    "O Terno",
-    "The Beatles",
-    "Elis Regina",
-    "The Lumineers",
-    "Selvagens a Procura de Lei",
-  ];
-  let imgGen = ["Indie Rock", "Classic Rock", "MPB", "Folk Rock", "Indie Rock"];
+
+  const handleCarouselClick = (index) => {
+    setCarouselState(index);
+  };
 
   return (
     <motion.div
@@ -33,7 +53,7 @@ const ForYou = () => {
       whileInView={{ opacity: 1, translateY: 0 }}
       transition={{
         duration: 1,
-        ease: "backInOut",
+        ease: "anticipate",
       }}
       viewport={{ once: true }}
     >
@@ -44,17 +64,28 @@ const ForYou = () => {
         For You
       </h1>
       <div className="bg-gray-300 flex py-10 px-10 gap-10 rounded-2xl border border-black shadow-2xl">
-        <img src={imgSrc[carrosselState]} alt="" className="w-96 h-96" />
+        <img
+          src={musicData[carouselState].imgUrl}
+          alt="musicData[carouselState].name"
+          className="w-96 h-96"
+        />
         <div className="flex flex-col w-full h-full">
-          <p className="font-bold text-4xl mb-5">{imgNames[carrosselState]}</p>
-          <p className="text-gray-600 text-xl">{imgArtists[carrosselState]}</p>
-          <p className="text-gray-600 text-xl">({imgGen[carrosselState]})</p>
+          <p className="font-bold text-4xl mb-5">
+            {musicData[carouselState].name}
+          </p>
+          <p className="text-gray-600 text-xl">
+            {musicData[carouselState].artist}
+          </p>
+          <p className="text-gray-600 text-xl">
+            ({musicData[carouselState].genre})
+          </p>
           <div className="flex mt-10 text-2xl">
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-regular fa-star"></i>
+            {[...Array(5)].map((_, i) => (
+              <i
+                key={i}
+                className={`fa-solid fa-star${i < 4 ? "" : " fa-regular"}`}
+              ></i>
+            ))}
           </div>
           <button className="bg-roxo text-white py-3 px-16 rounded-xl mt-36 text-xl font-bold place-self-end hover:bg-purple-700">
             Escutar agora
@@ -63,36 +94,15 @@ const ForYou = () => {
       </div>
 
       <div className="text-xl mt-10 text-center text-gray-600">
-        <i
-          className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 0 ? "text-roxo fa-solid" : ""
-          } `}
-          onClick={() => setCarrouselState(0)}
-        ></i>
-        <i
-          className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 1 ? "text-roxo fa-solid" : ""
-          } `}
-          onClick={() => setCarrouselState(1)}
-        ></i>
-        <i
-          className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 2 ? "text-roxo fa-solid" : ""
-          } `}
-          onClick={() => setCarrouselState(2)}
-        ></i>
-        <i
-          className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 3 ? "text-roxo fa-solid" : ""
-          } `}
-          onClick={() => setCarrouselState(3)}
-        ></i>
-        <i
-          className={`fa-circle fa-regular ml-2 cursor-pointer ${
-            carrosselState == 4 ? "text-roxo fa-solid" : ""
-          } `}
-          onClick={() => setCarrouselState(4)}
-        ></i>
+        {musicData.map((_, index) => (
+          <i
+            key={index}
+            className={`fa-circle fa-regular ml-2 cursor-pointer ${
+              carouselState === index ? "text-roxo fa-solid" : ""
+            } `}
+            onClick={() => handleCarouselClick(index)}
+          ></i>
+        ))}
       </div>
     </motion.div>
   );
