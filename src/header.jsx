@@ -7,8 +7,8 @@ const Header = () => {
   const [animating, setAnimating] = React.useState(false);
 
   return (
-    <div className="w-screen z-10 sticky top-0 ">
-      <header className="flex py-3 px-10 justify-between items-center bg-roxo">
+    <div className="w-screen z-10 sticky top-0 bg-roxo">
+      <header className="flex flex-wrap pt-5 lg:py-3 px-3 lg:px-10 lg:justify-between gap-5 items-center ">
         <span
           className="font-bold text-3xl cursor-pointer"
           onClick={() => {
@@ -26,18 +26,27 @@ const Header = () => {
         </Link>
         <input
           placeholder="Oque deseja escutar?"
-          className="w-6/12 px-5 py-2 rounded-2xl"
+          className="w-6/12 px-5 py-2 rounded-2xl hidden lg:block"
           type="text"
           name=""
           id=""
         />
         <Link
           to="login"
-          className="bg-gray-100 px-10 py-2 rounded-3xl font-bold"
+          className="bg-gray-100 px-2 lg:px-10 py-2 rounded-3xl font-bold text-end absolute lg:static top-10 right-10"
         >
           Login / Sign up
         </Link>
       </header>
+      <div className="w-screen flex lg:hidden justify-center pb-5">
+        <input
+          placeholder="Oque deseja escutar?"
+          className="w-10/12 px-10 py-2 rounded-2xl"
+          type="text"
+          name=""
+          id=""
+        />
+      </div>
       <ModalLateral showModal={modalLateral} setAnimating={setAnimating} />
     </div>
   );
