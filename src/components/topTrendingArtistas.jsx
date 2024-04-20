@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const TopTrandingArtistas = () => {
+const TopTrendingArtistas = () => {
   const bandData = [
     {
       imgUrl:
@@ -62,4 +62,4 @@ const TopTrandingArtistas = () => {
   );
 };
 
-export default TopTrandingArtistas;
+export default TopTrendingArtistas;

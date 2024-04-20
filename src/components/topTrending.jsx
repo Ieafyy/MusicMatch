@@ -4,7 +4,7 @@ import TopTrendingMusicas from "./topTrendingMusicas";
 import TopTrendingGeneros from "./topTrendingGeneros";
 import { motion } from "framer-motion";
 
-const TopTranding = () => {
+const TopTrending = () => {
   const [top, setTop] = React.useState("musica");
 
   return (
@@ -60,4 +60,4 @@ const TopTranding = () => {
   );
 };
 
-export default TopTranding;
+export default TopTrending;
