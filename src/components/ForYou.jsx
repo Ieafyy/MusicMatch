@@ -58,7 +58,7 @@ const ForYou = () => {
       viewport={{ once: true }}
     >
       <h1
-        className="text-5xl text-center mb-10"
+        className="text-5xl text-center mb-10 font-newAstro"
         style={{ textShadow: "2px 2px 5px #9333ea" }}
       >
         For You

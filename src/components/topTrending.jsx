@@ -17,7 +17,7 @@ const TopTranding = () => {
       }}
     >
       <h1
-        className="text-5xl text-center"
+        className="text-5xl text-center font-newAstro"
         style={{ textShadow: "2px 2px 5px #9333ea" }}
       >
         Top Trending
