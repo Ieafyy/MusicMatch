@@ -13,9 +13,6 @@ const Home = () => {
       <TopTrending />
       <ForYou />
       <NewsHome />
-      <div className="mt-10 text-5xl text-center">
-        <i className="fas fa-arrow-down bg-gray-300 p-5 rounded-2xl hover:bg-gray-400 cursor-pointer duration-300 ease-in-out" />
-      </div>
     </div>
   );
 };

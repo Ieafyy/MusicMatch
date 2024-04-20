@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ForYou = () => {
   const [carrosselState, setCarrouselState] = React.useState(0);
@@ -26,7 +27,16 @@ const ForYou = () => {
   let imgGen = ["Indie Rock", "Classic Rock", "MPB", "Folk Rock", "Indie Rock"];
 
   return (
-    <div className="my-10">
+    <motion.div
+      className="my-10"
+      initial={{ opacity: 0, translateY: 500 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{
+        duration: 1,
+        ease: "backInOut",
+      }}
+      viewport={{ once: true }}
+    >
       <h1
         className="text-5xl text-center mb-10"
         style={{ textShadow: "2px 2px 5px #9333ea" }}
@@ -84,7 +94,7 @@ const ForYou = () => {
           onClick={() => setCarrouselState(4)}
         ></i>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,12 +2,20 @@ import React from "react";
 import TopTrendingArtistas from "./topTrendingArtistas";
 import TopTrendingMusicas from "./topTrendingMusicas";
 import TopTrendingGeneros from "./topTrendingGeneros";
+import { motion } from "framer-motion";
 
 const TopTranding = () => {
   const [top, setTop] = React.useState("musica");
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, translateY: 500 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{
+        duration: 1,
+        ease: "backInOut",
+      }}
+    >
       <h1
         className="text-5xl text-center"
         style={{ textShadow: "2px 2px 5px #9333ea" }}
@@ -48,7 +56,7 @@ const TopTranding = () => {
           {top === "genero" && <TopTrendingGeneros />}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
