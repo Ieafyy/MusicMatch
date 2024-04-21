@@ -10,6 +10,7 @@ export default {
       },
       fontFamily: {
         newAstro: ["new-astro", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
