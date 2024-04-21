@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { EffectCoverflow } from "swiper/modules";
+import "swiper/css/pagination";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 const TopTrendingMusicas = () => {
   const musicData = [
@@ -82,13 +83,17 @@ const TopTrendingMusicas = () => {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
           }}
-          modules={[EffectCoverflow]}
+          modules={[EffectCoverflow, Autoplay]}
           className="w-full h-full"
         >
           {musicData.map((music, index) => {

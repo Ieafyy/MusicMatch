@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 const TopTrendingArtistas = () => {
   const bandData = [
@@ -79,13 +79,17 @@ const TopTrendingArtistas = () => {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
           }}
-          modules={[EffectCoverflow]}
+          modules={[EffectCoverflow, Autoplay]}
           className="w-full h-full"
         >
           {bandData.map((band, index) => {
