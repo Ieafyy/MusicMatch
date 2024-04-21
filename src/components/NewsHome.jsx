@@ -17,35 +17,67 @@ const NewsHome = () => {
 
   return (
     <div>
-      <h1
-        className="text-5xl text-center mb-10 font-newAstro"
-        style={{ textShadow: "2px 2px 5px #9333ea" }}
-      >
-        Oque rola no mundo da música?
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-10 ">
-        {urls.map((url, index) => {
-          return (
-            <div
-              className="flex flex-col cursor-pointer bg-rosa ease-in-out duration-300 hover:scale-105 hover:bg-roxo hover:shadow-2xl tra hover:shadow-purple-500"
-              style={{
-                height: "50vh",
-              }}
-            >
-              <img
-                src={url}
-                alt=""
-                style={{ width: "100%", height: "60%", objectFit: "cover" }}
-              />
-              <p className="text-2xl py-5 text-white font-bold px-10 ">
-                {manchetes[index]}
-              </p>
-            </div>
-          );
-        })}
+      <div id="computador" className="hidden lg:block">
+        <h1
+          className="text-5xl text-center mb-10 font-newAstro"
+          style={{ textShadow: "2px 2px 5px #9333ea" }}
+        >
+          Oque rola no mundo da música?
+        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-10 ">
+          {urls.map((url, index) => {
+            return (
+              <div
+                className="flex lg:overflow-hidden flex-col cursor-pointer bg-rosa ease-in-out duration-300 hover:scale-105 hover:bg-roxo hover:shadow-2xl hover:shadow-purple-500"
+                style={{
+                  height: "50vh",
+                }}
+              >
+                <img
+                  src={url}
+                  alt=""
+                  style={{ width: "100%", height: "60%", objectFit: "cover" }}
+                />
+                <p className="text-2xl py-5 text-white font-bold px-10">
+                  {manchetes[index]}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-10 text-5xl text-center">
+          <i className="fas fa-arrow-down bg-gray-300 p-5 rounded-2xl hover:bg-gray-400 cursor-pointer duration-300 ease-in-out" />
+        </div>
       </div>
-      <div className="mt-10 text-5xl text-center">
-        <i className="fas fa-arrow-down bg-gray-300 p-5 rounded-2xl hover:bg-gray-400 cursor-pointer duration-300 ease-in-out" />
+
+      {/* ------------------------------------ */}
+
+      <div id="mobile" className="block lg:hidden">
+        <h1
+          className="text-5xl text-center mb-10 font-newAstro"
+          style={{ textShadow: "2px 2px 5px #9333ea" }}
+        >
+          Oque rola no mundo da música?
+        </h1>
+        <div className="grid grid-cols-1 gap-10 mt-10 ">
+          {urls.map((url, index) => {
+            return (
+              <div className="flex lg:overflow-hidden flex-col cursor-pointer bg-rosa ease-in-out duration-300 hover:scale-105 hover:bg-roxo hover:shadow-2xl hover:shadow-purple-500">
+                <img
+                  src={url}
+                  alt=""
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+                <p className="text-2xl py-5 text-white font-bold px-10">
+                  {manchetes[index]}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-10 text-5xl text-center">
+          <i className="fas fa-arrow-down bg-gray-300 p-5 rounded-2xl hover:bg-gray-400 cursor-pointer duration-300 ease-in-out" />
+        </div>
       </div>
     </div>
   );

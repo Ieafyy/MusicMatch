@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, animate } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./forYou.css";
@@ -134,19 +134,28 @@ const ForYou = () => {
         </h1>
         <div className="bg-gray-300 py-10 px-10 gap-10 rounded-2xl border border-black shadow-2xl">
           <Swiper
-            className="pb-16"
+            className="pb-16 forYou"
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
             spaceBetween={50}
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination, Autoplay, EffectCoverflow]}
             pagination={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
             }}
           >
             {musicData.map((music, index) => {
               return (
                 <SwiperSlide
-                  className="items-center forYou flex flex-col mt-10"
+                  className="items-center flex forYou flex-col mt-10"
                   key={index}
                 >
                   <img src={music.imgUrl} alt={music.name} className="w-48" />
