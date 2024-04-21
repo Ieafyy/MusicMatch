@@ -32,7 +32,7 @@ const TopTradingGeneros = () => {
           </div>
         ))}
       </div>
-      <button className="bg-gray-100 py-3 px-16 rounded-xl mt-10 text-xl font-bold place-self-end hover:bg-gray-200">
+      <button className="bg-gray-100 py-3 px-16 rounded-xl mt-10 text-xl font-bold place-self-center lg:place-self-end hover:bg-gray-200">
         Veja mais
       </button>
     </div>
