@@ -65,7 +65,7 @@ const TopTrending = () => {
 
       <motion.div
         id="mobile"
-        className="block lg:hidden"
+        className="block lg:hidden mb-10"
         initial={{ opacity: 0, translateY: 500 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
@@ -88,7 +88,7 @@ const TopTrending = () => {
                 top === "musica" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              <i class="fa-solid fa-music"></i>
+              <i className="fa-solid fa-music"></i>
             </span>
             <span
               onClick={() => setTop("artista")}
@@ -96,7 +96,7 @@ const TopTrending = () => {
                 top === "artista" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              <i class="fa-solid fa-user"></i>
+              <i className="fa-solid fa-user"></i>
             </span>
             <span
               onClick={() => setTop("genero")}
@@ -104,7 +104,7 @@ const TopTrending = () => {
                 top === "genero" ? "bg-roxo w-36" : "w-14 bg-black text-white"
               } `}
             >
-              <i class="fa-solid fa-guitar"></i>
+              <i className="fa-solid fa-guitar"></i>
             </span>
           </nav>
           <div className="bg-roxo py-10 text-black">

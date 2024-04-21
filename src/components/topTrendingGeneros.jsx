@@ -25,7 +25,9 @@ const TopTradingGeneros = () => {
                 ease: "anticipate",
               }}
             >
-              <p className="font-bold text-3xl py-5 ml-2">{genre.name}</p>
+              <p className="font-bold text-3xl py-5 ml-2">
+                #{index + 1} | {genre.name}
+              </p>
             </motion.div>
           </div>
         ))}

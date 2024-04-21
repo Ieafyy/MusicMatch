@@ -1,5 +1,9 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import { EffectCoverflow } from "swiper/modules";
 
 const TopTrendingMusicas = () => {
   const musicData = [
@@ -36,34 +40,79 @@ const TopTrendingMusicas = () => {
   ];
 
   return (
-    <div className="flex flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl">
-      <div className="flex flex-col gap-5">
-        {musicData.map((music, index) => (
-          <div key={index} className="flex gap-10">
-            <img
-              src={music.imgUrl}
-              alt={music.songName}
-              className="min-w-24 max-w-24 h-24"
-            />
-            <motion.div
-              className={`bg-white pl-2 h-24 overflow-visible whitespace-nowrap`}
-              initial={{ width: 0 }}
-              animate={{ width: 1200 - index * 100 }}
-              transition={{
-                duration: 1,
-                delay: index / 25,
-                ease: "anticipate",
-              }}
-            >
-              <p className="font-bold text-xl mt-5">{music.songName}</p>
-              <p className="text-lg">{music.artist}</p>
-            </motion.div>
-          </div>
-        ))}
+    <div>
+      <div
+        id="computador"
+        className=" flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl hidden lg:flex"
+      >
+        <div className="flex flex-col gap-5">
+          {musicData.map((music, index) => (
+            <div key={index} className="flex gap-10">
+              <img
+                src={music.imgUrl}
+                alt={music.songName}
+                className="min-w-24 max-w-24 h-24"
+              />
+              <motion.div
+                className={`bg-white pl-2 h-24 overflow-visible whitespace-nowrap`}
+                initial={{ width: 0 }}
+                animate={{ width: 1200 - index * 100 }}
+                transition={{
+                  duration: 1,
+                  delay: index / 25,
+                  ease: "anticipate",
+                }}
+              >
+                <p className="font-bold text-xl mt-5">{music.songName}</p>
+                <p className="text-lg">{music.artist}</p>
+              </motion.div>
+            </div>
+          ))}
+        </div>
+        <button className="bg-gray-100 py-3 px-16 rounded-xl mt-10 text-xl font-bold place-self-end hover:bg-gray-200">
+          Veja mais
+        </button>
       </div>
-      <button className="bg-gray-100 py-3 px-16 rounded-xl mt-10 text-xl font-bold place-self-end hover:bg-gray-200">
-        Veja mais
-      </button>
+
+      {/* ------------------------------------------------- */}
+
+      <div className="px-10 bg-roxo rounded-b-2xl lg:hidden flex flex-col items-center">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+          }}
+          modules={[EffectCoverflow]}
+          className="w-full h-full"
+        >
+          {musicData.map((music, index) => {
+            return (
+              <SwiperSlide key={index} className="flex flex-col">
+                <p className="text-center text-3xl mt-2 text-white font-bold">
+                  #{index + 1} - {music.songName}
+                </p>
+                <img
+                  src={music.imgUrl}
+                  alt={music.songName}
+                  className="min-w-48 max-w-48 h-48 my-10 place-self-center"
+                />
+                <p className="text-center text-l mt-2 text-white">
+                  {music.artist}
+                </p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <button className="bg-gray-100 py-3 px-16 rounded-xl mt-5 text-xl font-bold hover:bg-gray-200">
+          Veja mais
+        </button>
+      </div>
     </div>
   );
 };
