@@ -1,40 +1,40 @@
 import React from "react";
 import InputField from "./InputField";
-import Footer from "../footer";
+import { motion } from "framer-motion";
 
-const LoginComp = () => {
+const LoginComp = ({ setState }) => {
   return (
     <div>
-      <div className="flex justify-center mt-10">
-        <div className="mt-10 w-4/12 bg-cinza flex flex-col py-10 rounded-xl">
+      <div className="grid place-content-center">
+        <motion.div
+          className="bg-cinza p-20 flex flex-col justify-center rounded-xl mt-20"
+          animate={{
+            opacity: [0, 1],
+            translateY: [500, 0],
+          }}
+          transition={{
+            duration: 1,
+            ease: "backInOut",
+          }}
+        >
           <h1
             className="text-6xl text-center font-newAstro pb-10"
             style={{ textShadow: "2px 2px 5px #9333ea" }}
           >
             Login
           </h1>
-          <InputField
-            placeholder="User"
-            type="text"
-            icon="fas fa-user"
-            className="place-self-center"
-          />
-          <InputField
-            placeholder="Senha"
-            type="password"
-            icon="fas fa-lock"
-            className="place-self-center"
-          />
-          <button className="bg-roxo text-white py-3 px-16 rounded-xl mt-5 text-xl font-bold hover:bg-purple-700 place-self-center">
-            Escutar agora
+          <InputField placeholder="User" type="text" icon="fas fa-user" />
+          <InputField placeholder="Senha" type="password" icon="fas fa-lock" />
+          <button className="bg-roxo text-white py-3 px-20 rounded-xl mt-10 text-xl font-bold place-self-center hover:bg-gray-200">
+            Login
           </button>
-          <p className="text-center mt-3 text-white underline text-xl cursor-pointer">
+          <p
+            className="text-xl underline mt-4 text-white cursor-pointer"
+            onClick={() => setState("cadastro")}
+          >
             Ou se cadastre em nossa plataforma!
           </p>
-        </div>
-      </div>
-      <div className="fixed bottom-0 w-screen">
-        <Footer />
+        </motion.div>
       </div>
     </div>
   );
