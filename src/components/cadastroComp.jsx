@@ -39,7 +39,7 @@ const CadastroComp = ({ setState }) => {
                 type="radio"
                 name="tipo"
                 id="radioOuv"
-                className="scale-125 mr-1"
+                className="scale-125 mr-2"
               />
               <label htmlFor="radioOuv" className="mr-10">
                 Ouvinte
@@ -48,7 +48,7 @@ const CadastroComp = ({ setState }) => {
                 type="radio"
                 name="tipo"
                 id="radioMus"
-                className="scale-125 mr-1"
+                className="scale-125 mr-2"
               />
               <label htmlFor="radioMus">Músico</label>
             </div>

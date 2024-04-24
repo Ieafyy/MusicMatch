@@ -1,0 +1,9 @@
+.date-input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.date-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
