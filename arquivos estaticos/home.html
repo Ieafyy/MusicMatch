@@ -50,7 +50,7 @@
         <div class="mt-10">
           <nav class="flex flex-row gap-5">
             <span
-              class="cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl bg-roxo w-36 text-white"
+              class="cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl bg-roxo w- text-white"
               id="selectorMusicaDesk" onclick="handleClickNavigation('musica-desk')">Musicas</span><span
               class="cursor-pointer ease-in-out duration-300 text-center px-10 py-3 font-bold rounded-t-2xl w-36 bg-black text-white"
               id="selectorArtistaDesk" onclick="handleClickNavigation('artista-desk')">Artistas</span><span
@@ -115,11 +115,11 @@
             </button>
           </div>
 
-          <div class="flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl flex" id="nav-artista-desk">
+          <div class="flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl hidden" id="nav-artista-desk">
             <h1>ARTISTA</h1>
           </div>
 
-          <div class="flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl flex" id="nav-genero-desk">
+          <div class="flex-col pt-10 px-10 gap-10 bg-roxo rounded-b-2xl hidden" id="nav-genero-desk">
             <h1>GENERO</h1>
           </div>
 
@@ -127,7 +127,6 @@
       </div>
     </div>
 
-    <!-- TELA PARA MOBILE -->
     <div id="mobile" class="block lg:hidden mb-10" style="opacity: 1; transform: none">
       <h1 class="text-5xl text-center font-newAstro" style="text-shadow: rgb(147, 51, 234) 2px 2px 5px">
         Top Trending (mobile)
