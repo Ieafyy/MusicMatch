@@ -1,0 +1,38 @@
+@import url("https://use.typekit.net/mef3lzj.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.date-input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.date-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.bg-cinza {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 130 130);
+}
+.bg-rosa {
+  --tw-bg-opacity: 1;
+  background-color: rgb(179 122 197);
+}
+.bg-roxo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 28 148);
+}
+.font-Montserrat {
+  font-family: Montserrat, sans-serif;
+}
+.font-newAstro {
+  font-family: new-astro, sans-serif;
+}
+.text-cinza {
+  --tw-text-opacity: 1;
+  color: rgb(130 130 130 / var(--tw-text-opacity));
+}
+.text-roxo {
+  --tw-text-opacity: 1;
+  color: rgb(132 28 148 / var(--tw-text-opacity));
+}
