@@ -1,0 +1,16 @@
+#dropdown-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#dropdown-ul li {
+  transition: transform 0.3s ease;
+}
+
+.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.hide {
+  transform: translate3d(-100%, 0, 0);
+}
