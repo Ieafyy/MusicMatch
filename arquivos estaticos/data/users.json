@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "c0be",
+      "tipo": "ouvinte",
+      "username": "Athenas",
+      "email": "athena123@",
+      "password": "123",
+      "bd": "2003-06-28"
+    }
+  ],
+  "actualUser": [
+    {
+      "tipo": "ouvinte",
+      "username": "Athenas",
+      "email": "athena123@",
+      "password": "123",
+      "bd": "2003-06-28",
+      "id": "1"
+    }
+  ]
+}

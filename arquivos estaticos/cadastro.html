@@ -14,6 +14,21 @@
   <title>Cadastro</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    .btn-disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .btn-disabled:hover {
+      background-color: #ccc;
+      color: #000;
+    }
+  </style>
+
+
+
 </head>
 
 <body>
@@ -37,7 +52,7 @@
 
     <!-- MENU -->
     <section class="fixed" id="menu">
-      <ul class="font-bold text-white cursor-pointer" id="dropdown-ul">
+      <ul class="font-bold text-white cursor-pointer hidden" id="dropdown-ul">
         <li class="bg-cinza p-5 border-b-2 duration-300 hide hover:scale-110">Quem somos</li>
         <li class="bg-cinza p-5 border-b-2 duration-300 hide hover:scale-110">Quem somos</li>
         <li class="bg-cinza p-5 border-b-2 duration-300 hide hover:scale-110">Quem somos</li>
@@ -56,32 +71,33 @@
         </h1>
         <div class="flex flex-col gap-0">
           <p class="text-4xl font-bold">Sou: </p>
-          <div class="text-2xl mt-3"><input type="radio" name="tipo" id="radioOuv" class="scale-125 mr-2"><label
-              for="radioOuv" class="mr-10">Ouvinte</label><input type="radio" name="tipo" id="radioMus"
-              class="scale-125 mr-2"><label for="radioMus">Músico</label></div>
+          <div class="text-2xl mt-3"><input type="radio" value="ouvinte" name="tipo-pc" id="tipo-pc"
+              class="scale-125 mr-2"><label for="" class="mr-10">Ouvinte</label><input type="radio" value="musico"
+              name="tipo-pc" id="tipo-pc" class="scale-125 mr-2"><label for="">Músico</label></div>
           <p class="text-4xl font-bold mb-3 mt-8">Nome de usuário:</p>
-          <div class="relative h-16 undefined"><input type="text" placeholder="User"
+          <div class="relative h-16 undefined"><input type="text" id="user-pc" placeholder="User"
               class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-user absolute top-2 left-5 text-2xl"
               aria-hidden="true"></i></div>
           <p class="text-4xl font-bold mb-3 mt-8">Email:</p>
-          <div class="relative h-16 undefined"><input type="email" placeholder="Email"
+          <div class="relative h-16 undefined"><input type="email" id="email-pc" placeholder="Email"
               class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-envelope absolute top-2 left-5 text-2xl"
               aria-hidden="true"></i></div>
           <p class="text-4xl font-bold mb-3 mt-8">Senha:</p>
           <div class="flex gap-10">
-            <div class="relative h-16 undefined"><input type="password" placeholder="Senha"
+            <div class="relative h-16 undefined"><input type="password" id="password-pc" placeholder="Senha"
                 class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-lock absolute top-2 left-5 text-2xl"
                 aria-hidden="true"></i></div>
-            <div class="relative h-16 undefined"><input type="password" placeholder="Repetir a senha"
+            <div class="relative h-16 undefined"><input type="password" id="confirm-pc" placeholder="Repetir a senha"
                 class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-lock absolute top-2 left-5 text-2xl"
                 aria-hidden="true"></i></div>
           </div>
           <p class="text-4xl font-bold mb-3 mt-8">Data de nascimento:</p>
-          <div class="relative h-16 undefined"><input type="date" class="py-2 rounded-xl pl-14 text-2xl date-input"><i
+          <div class="relative h-16 undefined"><input type="date" id="date-pc"
+              class="py-2 rounded-xl pl-14 text-2xl date-input"><i
               class="fas fa-calendar absolute top-2 left-5 text-2xl" aria-hidden="true"></i></div>
         </div>
-        <button
-          class="bg-roxo duration-300 text-white py-3 px-20 rounded-xl mt-10 text-xl font-bold place-self-center hover:bg-gray-100 hover:text-black">Cadastrar</button>
+        <button onclick="handleClick('pc')" disabled id="btnCadastro-pc"
+          class="btn-disabled bg-roxo duration-300 text-white py-3 px-20 rounded-xl mt-10 text-xl font-bold place-self-center hover:bg-gray-100 hover:text-black">Cadastrar</button>
         <p class="text-xl underline mt-4 cursor-pointer text-center" onclick="toggle('login')">Já possui conta? Faça seu
           login aqui!</p>
       </div>
@@ -97,32 +113,34 @@
         </h1>
         <div class="flex flex-col gap-0">
           <p class="text-4xl font-bold">Sou: </p>
-          <div class="text-2xl mt-3"><input type="radio" name="tipo" id="radioOuv" class="scale-125 mr-2"><label
-              for="radioOuv" class="mr-10">Ouvinte</label><input type="radio" name="tipo" id="radioMus"
-              class="scale-125 mr-2"><label for="radioMus">Músico</label></div>
+          <div class="text-2xl mt-3"><input type="radio" name="tipo-mobile" value='ouvinte' id="tipo-mobile"
+              class="scale-125 mr-2"><label for="radioOuv" class="mr-10">Ouvinte</label><input type="radio"
+              name="tipo-mobile" value='musico' id="tipo-mobile" class="scale-125 mr-2"><label
+              for="radioMus">Músico</label></div>
           <p class="text-4xl font-bold mb-3 mt-8">Nome de usuário:</p>
-          <div class="relative h-16 undefined"><input type="text" placeholder="User"
+          <div class="relative h-16 undefined"><input type="text" id="user-mobile" placeholder="User"
               class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-user absolute top-2 left-5 text-2xl"
               aria-hidden="true"></i></div>
           <p class="text-4xl font-bold mb-3 mt-8">Email:</p>
-          <div class="relative h-16 undefined"><input type="email" placeholder="Email"
+          <div class="relative h-16 undefined"><input type="email" id="email-mobile" placeholder="Email"
               class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-envelope absolute top-2 left-5 text-2xl"
               aria-hidden="true"></i></div>
           <p class="text-4xl font-bold mb-3 mt-8">Senha:</p>
           <div class="flex gap-2 flex-wrap">
-            <div class="relative h-16 undefined"><input type="password" placeholder="Senha"
+            <div class="relative h-16 undefined"><input type="password" id="password-mobile" placeholder="Senha"
                 class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-lock absolute top-2 left-5 text-2xl"
                 aria-hidden="true"></i></div>
-            <div class="relative h-16 undefined"><input type="password" placeholder="Repetir a senha"
-                class="py-2 rounded-xl pl-14 text-2xl "><i class="fas fa-lock absolute top-2 left-5 text-2xl"
-                aria-hidden="true"></i></div>
+            <div class="relative h-16 undefined"><input type="password" id="confirm-mobile"
+                placeholder="Repetir a senha" class="py-2 rounded-xl pl-14 text-2xl "><i
+                class="fas fa-lock absolute top-2 left-5 text-2xl" aria-hidden="true"></i></div>
           </div>
           <p class="text-4xl font-bold mb-3 mt-8">Data de nascimento:</p>
-          <div class="relative h-16 undefined"><input type="date" class="py-2 rounded-xl pl-14 text-2xl date-input"><i
+          <div class="relative h-16 undefined"><input type="date" id="date-mobile"
+              class="py-2 rounded-xl pl-14 text-2xl date-input"><i
               class="fas fa-calendar absolute top-2 left-5 text-2xl" aria-hidden="true"></i></div>
         </div>
-        <button
-          class="bg-roxo duration-300 text-white py-3 px-20 rounded-xl mt-10 text-xl font-bold place-self-center hover:bg-gray-100 hover:text-black">Cadastrar</button>
+        <button onclick="handleClick('mobile')" disabled id="btnCadastro-mobile"
+          class="btn-disabled bg-roxo duration-300 text-white py-3 px-20 rounded-xl mt-10 text-xl font-bold place-self-center hover:bg-gray-100 hover:text-black">Cadastrar</button>
         <p class="text-xl underline mt-4 cursor-pointer text-center" onclick="toggle('login')">Já possui conta? Faça
           seu
           login aqui!</p>
@@ -183,6 +201,7 @@
   <script src="./assets/dropdown.js"></script>
   <script src="./assets/cadastroNav.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/handleCadastro.js"></script>
   <script>
     AOS.init();
   </script>
