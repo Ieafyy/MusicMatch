@@ -110,7 +110,7 @@ const handleClick = (disp) => {
               .then((response) => response.json())
               .then((data) => {
                 console.log("sucesso");
-                window.open("/arquivos%20estaticos/home.html");
+                window.location.href = "/arquivos%20estaticos/home.html";
               })
               .catch((error) => {
                 console.error("Error:", error);

@@ -25,20 +25,33 @@
       "cidade": "Belo Horizonte",
       "estado": "MG",
       "bio": "Me chamo Athena e crio músicas indie! "
+    },
+    {
+      "id": "3521",
+      "tipo": "ouvinte",
+      "username": "Ana111",
+      "email": "ana@gmail.com",
+      "password": "111",
+      "bd": "1999-10-10",
+      "nome": "Ana",
+      "sobrenome": "Clara",
+      "cidade": "Contagem",
+      "estado": "MG",
+      "bio": "Me chamo Ana e meus gêneros musicais favoritos são rock, mpb e jazz! "
     }
   ],
   "actualUser": [
     {
-      "tipo": "musico",
-      "username": "Athena",
-      "email": "athena@gmail.com",
-      "password": "123",
-      "bd": "2024-06-08",
-      "nome": "Palas",
-      "sobrenome": "Athena",
-      "cidade": "Belo Horizonte",
+      "tipo": "ouvinte",
+      "username": "Ana111",
+      "email": "ana@gmail.com",
+      "password": "111",
+      "bd": "1999-10-10",
+      "nome": "Ana",
+      "sobrenome": "Clara",
+      "cidade": "Contagem",
       "estado": "MG",
-      "bio": "Me chamo Athena e crio músicas indie! ",
+      "bio": "Me chamo Ana e meus gêneros musicais favoritos são rock, mpb e jazz! ",
       "id": "1"
     }
   ]
