@@ -1,21 +1,44 @@
 {
   "users": [
     {
-      "id": "c0be",
+      "id": "5b88",
       "tipo": "ouvinte",
-      "username": "Athenas",
-      "email": "athena123@",
+      "username": "Raphael123",
+      "email": "raphael@gmail.com",
       "password": "123",
-      "bd": "2003-06-28"
+      "bd": "2024-06-08",
+      "nome": "Raphael",
+      "sobrenome": "Ramalho",
+      "cidade": "Contagem",
+      "estado": "MG",
+      "bio": "Me chamo Raphael e estou aqui para conhecer novas músicas!"
+    },
+    {
+      "id": "c110",
+      "tipo": "musico",
+      "username": "Athena",
+      "email": "athena@gmail.com",
+      "password": "123",
+      "bd": "2024-06-08",
+      "nome": "Palas",
+      "sobrenome": "Athena",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "bio": "Me chamo Athena e crio músicas indie! "
     }
   ],
   "actualUser": [
     {
-      "tipo": "ouvinte",
-      "username": "Athenas",
-      "email": "athena123@",
+      "tipo": "musico",
+      "username": "Athena",
+      "email": "athena@gmail.com",
       "password": "123",
-      "bd": "2003-06-28",
+      "bd": "2024-06-08",
+      "nome": "Palas",
+      "sobrenome": "Athena",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "bio": "Me chamo Athena e crio músicas indie! ",
       "id": "1"
     }
   ]

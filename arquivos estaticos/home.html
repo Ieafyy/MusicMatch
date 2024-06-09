@@ -26,9 +26,12 @@
           onClick="toggleMenu()"></i></span><a class="flex mb-4 md:mb-0" href="/arquivos%20estaticos/home.html"><img
           class="rounded-full w-16 h-16" src="https://i.ibb.co/rckCKp5/logo-preta.png" alt="Image" /></a><input
         placeholder="Oque deseja escutar?" class="w-6/12 px-5 py-2 rounded-2xl hidden lg:block" type="text" name=""
-        id="" /><a
+        id="" /><a id="cadbtn"
         class="bg-gray-100 px-2 lg:px-10 py-2 rounded-3xl font-bold text-end absolute lg:static top-10 right-10"
         href="/arquivos%20estaticos/cadastro.html">Login / Sign up</a>
+      <a id="userbtn"
+        class="bg-gray-100 px-2 lg:px-10 py-2 rounded-3xl font-bold text-end absolute lg:static top-10 right-10"
+        href="#" onclick="alert('acessa a pagina de perfil')"></a>
     </header>
     <!-- BARRA DE PESQUISAR MOBILE -->
     <div class="w-screen flex lg:hidden justify-center pb-5">
@@ -809,6 +812,7 @@
   <script src="./assets/swiper.js"></script>
   <script src="./assets/dropdown.js"></script>
   <script src="./assets/navigation.js"></script>
+  <script src="./assets/handleinit.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
